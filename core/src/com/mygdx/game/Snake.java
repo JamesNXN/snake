@@ -11,4 +11,7 @@ public class Snake{
     void addSegmant(Cell cell) {
         body.add(cell);
     }
+    boolean checkCollision(){
+
+    }
 }

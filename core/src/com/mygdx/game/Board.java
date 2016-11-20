@@ -8,12 +8,15 @@ public class Board {
     Cell[][] board = new Cell[256][256];
     Random random = new Random();
     Snake snake = new Snake();
+    Cell fruit = new Cell()
     char prevDirection = 'R';
+
 
     void spawnFruit(){
         int x = random.nextInt(256) + 1;
         int y = random.nextInt(256) + 1;
         board[y][x] = new Cell(x,y,true);
+        fruit = new Cell(x,y,true);
     }
 
     void spawnSnake(){
