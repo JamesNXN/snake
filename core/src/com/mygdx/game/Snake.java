@@ -5,13 +5,20 @@ import java.util.ArrayList;
 /**
  * Created by nxn1 on 20/11/2016.
  */
-public class Snake{
+class Snake{
     List<Cell> body = new ArrayList<Cell>();
 
     void addSegmant(Cell cell) {
         body.add(cell);
     }
-    boolean checkCollision(){
 
+    boolean checkCollision(){
+        Cell head = this.body.get(-1);
+        for (Cell cells : this.body){
+            if (head == cells) {
+                return true;
+            }
+        }
+        return false;
     }
 }

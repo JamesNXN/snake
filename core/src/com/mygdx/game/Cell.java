@@ -1,27 +1,25 @@
 package com.mygdx.game;
 
 /**
- * Created by nxn1 on 20/11/2016.
+ This Class holds information on the cells that form the snakes body
+ and the cell for the fruit.
  */
-public class Cell {
+class Cell {
     private int x;
     private int y;
-    private boolean fruit;
 
-    public Cell(){
+    Cell(){
         x = 0;
         y = 0;
-        fruit = false;
     }
-    public Cell(int coordX, int coordY) {
+    Cell(int coordX, int coordY) {
         x = coordX;
         y = coordY;
-        fruit = false;
     }
-    public Cell(int coordX, int coordY, boolean amIFruit){
-        x = coordX;
-        y = coordY;
-        fruit = amIFruit;
+    @Override
+    public boolean equals(Object obj){
+        Cell cell = (Cell) obj;
+        return this.getX() == cell.getX() && this.getY() == cell.getY();
     }
 
     int getX(){
@@ -30,8 +28,5 @@ public class Cell {
 
     int getY(){
         return y;
-    }
-    boolean getFruit(){
-        return fruit;
     }
 }
