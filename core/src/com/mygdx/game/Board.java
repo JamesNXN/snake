@@ -7,7 +7,9 @@ import com.badlogic.gdx.graphics.Color;
  and moving the snake around.
  */
 public class Board {
-    private Cell[][] board = new Cell[256][256];
+    private final int HEIGHT = 30;
+    private final int WIDTH = 30;
+    private Cell[][] board = new Cell[HEIGHT][WIDTH];
     private Random random = new Random();
     private Snake snake = new Snake();
     private Cell fruit = new Cell();
@@ -15,8 +17,8 @@ public class Board {
 
 
     void spawnFruit(){
-        int x = random.nextInt(256) + 1;
-        int y = random.nextInt(256) + 1;
+        int x = random.nextInt(HEIGHT) + 1;
+        int y = random.nextInt(WIDTH) + 1;
         for (Cell cells : snake.body){
             if (cells.getX() == x && cells.getY() == y){
                 this.spawnFruit();
@@ -27,12 +29,12 @@ public class Board {
     }
 
     void spawnSnake(){
-        snake.addSegmant(new Cell(126,128, Color.WHITE));
-        snake.addSegmant(new Cell(127,128, Color.WHITE));
-        snake.addSegmant(new Cell(128,128, Color.WHITE));
-        board[128][128] = snake.body.get(2);
-        board[128][127] = snake.body.get(1);
-        board[128][126] = snake.body.get(0);
+        snake.addSegmant(new Cell((WIDTH/2)-2,HEIGHT/2, Color.WHITE));
+        snake.addSegmant(new Cell((WIDTH/2)-1,HEIGHT/2, Color.WHITE));
+        snake.addSegmant(new Cell(WIDTH/2,HEIGHT/2, Color.WHITE));
+        board[HEIGHT/2][WIDTH/2] = snake.body.get(2);
+        board[HEIGHT/2][(WIDTH/2)-1] = snake.body.get(1);
+        board[HEIGHT/2][(WIDTH/2)-2] = snake.body.get(0);
     }
     void moveSnake(Cell cell){
         snake.body.add(cell);
