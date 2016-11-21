@@ -26,7 +26,6 @@ public class MyGdxGame extends ApplicationAdapter {
 		mainMusic.play();
 
 		batch = new SpriteBatch();
-		img = new Texture("badlogic.jpg");
 
 		camera = new OrthographicCamera();
 		camera.setToOrtho(false,256,256);
@@ -37,7 +36,6 @@ public class MyGdxGame extends ApplicationAdapter {
 		Gdx.gl.glClearColor(1, 0, 0, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		batch.begin();
-		batch.draw(img, 0, 0);
 		batch.end();
 	}
 	
