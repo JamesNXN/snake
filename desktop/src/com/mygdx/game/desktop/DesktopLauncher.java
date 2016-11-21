@@ -7,6 +7,9 @@ import com.mygdx.game.MyGdxGame;
 public class DesktopLauncher {
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
+		config.title = "Snake";
+		config.width = 256;
+		config.height = 256;
 		new LwjglApplication(new MyGdxGame(), config);
 	}
 }

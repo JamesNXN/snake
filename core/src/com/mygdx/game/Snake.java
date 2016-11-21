@@ -3,7 +3,7 @@ package com.mygdx.game;
 import java.util.List;
 import java.util.ArrayList;
 /**
- * Created by nxn1 on 20/11/2016.
+ holds the snakes body and can add segments and also checks for collisions with the snakes own body.
  */
 class Snake{
     List<Cell> body = new ArrayList<Cell>();

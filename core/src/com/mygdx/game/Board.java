@@ -2,7 +2,8 @@ package com.mygdx.game;
 
 import java.util.Random;
 /**
- * Created by nxn1 on 20/11/2016.
+ Contains the boards current state and some stuff such as spawning the snake and fruit
+ and moving the snake around.
  */
 public class Board {
     private Cell[][] board = new Cell[256][256];

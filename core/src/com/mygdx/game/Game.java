@@ -1,7 +1,7 @@
 package com.mygdx.game;
 
 /**
- * Created by nxn1 on 20/11/2016.
+ main logic shizzle
  */
 public class Game {
     int gameState = 0;
