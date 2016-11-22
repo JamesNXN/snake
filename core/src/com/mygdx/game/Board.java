@@ -2,18 +2,19 @@ package com.mygdx.game;
 
 import java.util.Random;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Pixmap;
 /**
  Contains the boards current state and some stuff such as spawning the snake and fruit
  and moving the snake around.
  */
 public class Board {
-    private final int HEIGHT = 30;
-    private final int WIDTH = 30;
-    private Cell[][] board = new Cell[HEIGHT][WIDTH];
-    private Random random = new Random();
-    private Snake snake = new Snake();
-    private Cell fruit = new Cell();
-    private char prevDirection = 'R';
+    private final int HEIGHT = 64;
+    private final int WIDTH = 64;
+    Cell[][] board = new Cell[HEIGHT][WIDTH];
+    Random random = new Random();
+    Snake snake = new Snake();
+    Cell fruit = new Cell();
+    char prevDirection = 'R';
 
 
     void spawnFruit(){
@@ -35,6 +36,7 @@ public class Board {
         board[HEIGHT/2][WIDTH/2] = snake.body.get(2);
         board[HEIGHT/2][(WIDTH/2)-1] = snake.body.get(1);
         board[HEIGHT/2][(WIDTH/2)-2] = snake.body.get(0);
+        this.spawnFruit();
     }
     void moveSnake(Cell cell){
         snake.body.add(cell);
@@ -89,6 +91,9 @@ public class Board {
                 this.spawnFruit();
             }
         }
+    }
+    void update(Pixmap screen){
+        // changes board state and main logic stuff
     }
 }
 
