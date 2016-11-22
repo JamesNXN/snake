@@ -73,6 +73,6 @@ public class MyGdxGame extends ApplicationAdapter {
 		mainMusic.dispose();
 		appleEaten.dispose();
 		batch.dispose();
-		screen.dispose();
+		img.dispose();
 	}
 }
