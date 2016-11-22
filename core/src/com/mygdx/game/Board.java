@@ -30,9 +30,9 @@ public class Board {
     }
 
     void spawnSnake(){
-        snake.addSegmant(new Cell((WIDTH/2)-2,HEIGHT/2, Color.WHITE));
-        snake.addSegmant(new Cell((WIDTH/2)-1,HEIGHT/2, Color.WHITE));
-        snake.addSegmant(new Cell(WIDTH/2,HEIGHT/2, Color.WHITE));
+        snake.addSegment(new Cell((WIDTH/2)-2,HEIGHT/2, Color.WHITE));
+        snake.addSegment(new Cell((WIDTH/2)-1,HEIGHT/2, Color.WHITE));
+        snake.addSegment(new Cell(WIDTH/2,HEIGHT/2, Color.WHITE));
         board[HEIGHT/2][WIDTH/2] = snake.body.get(2);
         board[HEIGHT/2][(WIDTH/2)-1] = snake.body.get(1);
         board[HEIGHT/2][(WIDTH/2)-2] = snake.body.get(0);

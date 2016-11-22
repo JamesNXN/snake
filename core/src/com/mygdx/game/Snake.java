@@ -8,7 +8,7 @@ import java.util.ArrayList;
 class Snake{
     List<Cell> body = new ArrayList<Cell>();
 
-    void addSegmant(Cell cell) {
+    void addSegment(Cell cell) {
         body.add(cell);
     }
 
