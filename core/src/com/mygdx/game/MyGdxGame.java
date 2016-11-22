@@ -47,8 +47,16 @@ public class MyGdxGame extends ApplicationAdapter {
 		screen.setColor(Color.BLACK);
 		screen.fill();
 
+		/// I HAVE NO IDEA WHY THIS WONT WORK!!!
 		//for (Cell cell : game.snake.body) {
 		//	screen.drawPixel(cell.getX(),cell.getY(),cell.getColor().toIntBits());
+		//}
+		//screen.drawPixel(game.fruit.getX(),game.fruit.getY(),game.fruit.getColor().toIntBits());
+
+		//for (Cell[] row : game.board){
+		//	for (Cell cell : row){
+		//		screen.drawPixel(cell.getX(),cell.getY(),cell.getColor().toIntBits());
+		//	}
 		//}
 		//screen.drawPixel(game.fruit.getX(),game.fruit.getY(),game.fruit.getColor().toIntBits());
 
